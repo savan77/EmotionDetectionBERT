@@ -61,7 +61,7 @@ if __name__ == "__main__":
 	parser = argparse.ArgumentParser()
 	parser.add_argument("--model_dir",default="D:\\UTD\\Assignment\\NLP\\project\\model_output\\3_finetune_e20", help="path to output dir")
 	parser.add_argument("--test_csv", default="D:\\UTD\\Assignment\\NLP\\project\\nlp_test.csv")
-	parser.add_argument("--threshold", default=0.0021, type=float)
+	parser.add_argument("--threshold", default=0.0017, type=float)
 	parser.add_argument("--writeto_file", default=True)
 	parser.add_argument("--evaluation", default=True)
 	args = parser.parse_args()
