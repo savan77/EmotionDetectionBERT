@@ -23,6 +23,8 @@ You can find all available options by running following command.
 ```
 python train_bert.py --help
 ```
+Following graphs shows loss (1) and learning rate (2) over time.
+
 
 <img src="./assets/loss.svg" width="400" height="300"/>
 <img src="./assets/lr.svg" width="400" height="300"/>
@@ -30,6 +32,8 @@ python train_bert.py --help
 
 #### Inference ####
 Once you have the trained model, you can run the inference on test csv files. Note that as of now, this script requires annotated data to compute the metrics. But it can easily be modified to generate output only.
+
+Pretrained model can be found [here](https://utdallas.box.com/s/sqqb0n9qe7txb6j3725aiz76gwlmszuw)
 
 ```
 python inference.py --test_csv=D:\\UTD\\Assignment\\NLP\\project\\nlp_valid.csv --model_dir=D:\\UTD\\Assignment\\NLP\\project\\model_output\\3_finetune_e20
