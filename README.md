@@ -24,6 +24,9 @@ You can find all available options by running following command.
 python train_bert.py --help
 ```
 
+![Alt Text](./assets/loss.svg)
+<img src="./assets/loss.svg">
+
 
 #### Inference ####
 Once you have the trained model, you can run the inference on test csv files. Note that as of now, this script requires annotated data to compute the metrics. But it can easily be modified to generate output only.
@@ -81,3 +84,5 @@ Suprise        | 0.55          | 0.38       | 0.45
 Trust          | 0.12          | 0.12       | 0.12
 Neutral        | 0.37          | 0.37       | 0.37
 Average        | 0.60          | 0.62       | 0.55
+
+If we set threshold to 0.02 then the average accuracy is 0.66.
