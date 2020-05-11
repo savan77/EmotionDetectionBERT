@@ -24,8 +24,8 @@ You can find all available options by running following command.
 python train_bert.py --help
 ```
 
-<img src="./assets/loss.svg", width="400", height="300">
-<img src="./assets/lr.svg", width="400", height="300">
+<img src="./assets/loss.svg", width="400", height="300"/>
+<img src="./assets/lr.svg", width="400", height="300"/>
 
 
 #### Inference ####
