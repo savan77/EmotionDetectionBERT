@@ -49,7 +49,7 @@ I ran the evaluation on train set and found following informations.
 
 
 Emotion        | Precision     | Recall     | f1-score
----------------|--------------------------------------------
+---------------|---------------|------------|---------------
 Anger          | 0.97          | 0.95       | 0.96
 Anticipation   | 0.98          | 1.00       | 0.99
 Disgust        | 0.97          | 0.96       | 0.97
@@ -68,7 +68,7 @@ Average        | 0.98          | 0.97       | 0.97
 Following table shows information about test set.
 
 Emotion        | Precision     | Recall     | f1-score
----------------|--------------------------------------------
+---------------|---------------|------------|---------------
 Anger          | 0.53          | 0.67       | 0.59
 Anticipation   | 0.67          | 0.68       | 0.68
 Disgust        | 0.62          | 0.78       | 0.69
