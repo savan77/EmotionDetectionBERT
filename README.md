@@ -1,4 +1,4 @@
-## Multi Emotion Detection from Text using BERT ##
+## Multi Emotion Detection from COVID-19 Text using BERT ##
 
 #### Data Preparation ####
 The model expects data to be in the csv file. So, you first need to convert json files into csv files. If you have data in any other format, you may need to modify the code.
