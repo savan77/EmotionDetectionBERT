@@ -13,7 +13,7 @@ def create_model(llabels):
 	return llist
 
 def generate_csv(file, csvfile):
-	data= open("nlp_train.json","r")
+	data= open(file,"r")
 	out = open(csvfile, "w", encoding="utf-8", newline="")
 	writer = csv.writer(out)
 	writer.writerow(["id", "text", "anger", "anticipation","disgust","fear","joy","love","optimism","pessimism","sadness","surprise","trust","neutral"])
