@@ -40,18 +40,17 @@ def train(args):
 							logger=logger,
 							output_dir=args.out_dir,
 							finetuned_wgts_path=None,
-							warmup_steps=500,
+							warmup_steps=200,
 							multi_gpu=False,
 							is_fp16=False,
 							multi_label=True,
-							logging_steps=1)
+							logging_steps=10)
 
 	learner.fit(epochs=args.epochs,
-				lr=6e-5,
-				schedule_type="warmup_cosine",
-				optimizer_type="lamb",
-				validate=True)
-
+				lr=2e-3,
+				schedule_type="warmup_cosine_hard_restarts",
+				optimizer_type="lamb")
+				# validate=True)
 	learner.save_model()
 
 
@@ -60,7 +59,7 @@ if __name__ == "__main__":
 	parser.add_argument("--pretrained_model", default="bert-base-uncased", help="path to a pretrained model")
 	parser.add_argument("--out_dir",default="model_output/", help="path to output dir")
 	parser.add_argument("--is_onepanel", default=False, type=bool, help="train on onepanel cloud")
-	parser.add_argument("--epochs", default=1, type=int)
-	parser.add_argument("--batch_size", default=16, type=int)
+	parser.add_argument("--epochs", default=15, type=int)
+	parser.add_argument("--batch_size", default=10, type=int)
 	args = parser.parse_args()
 	train(args)
