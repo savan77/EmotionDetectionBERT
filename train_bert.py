@@ -1,3 +1,5 @@
+# Training script for bert
+
 from fast_bert.data_cls import BertDataBunch
 from fast_bert.learner_cls import BertLearner
 from fast_bert.metrics import accuracy

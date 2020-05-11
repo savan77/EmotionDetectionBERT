@@ -1,3 +1,7 @@
+######
+# Script to find best possible threshold for the confidence.
+#
+
 from fast_bert.prediction import BertClassificationPredictor
 import argparse
 import csv
@@ -26,9 +30,7 @@ def threshold(model, csvs):
 
 	multiple_predictions = predictor.predict_batch(list(inputs.keys()))
 	threshold_accs = {}
-	# print(len(inputs))
-	# print("dta")
-	# print(len(data))
+	
 	for th in thresholds:
 		correct = 0
 		# print(list(inputs.values())[0])

@@ -1,17 +1,19 @@
 ###
-# Generate data to train the BERT model
+# Generate data (in csv format) to train the BERT model
 
 import csv
 import json
 import argparse
 import os
 
+# store emotions as a one hot encodings
 def create_model(llabels):
 	llist = [0]* 12
 	for em, val in enumerate(llabels.values()):
 		llist[em] = 1 if val else 0
 	return llist
 
+# generate and write to csv file
 def generate_csv(file, csvfile):
 	data= open(file,"r")
 	out = open(csvfile, "w", encoding="utf-8", newline="")

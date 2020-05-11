@@ -1,3 +1,5 @@
+# Script to generate inference ofr a given csv file
+
 from fast_bert.prediction import BertClassificationPredictor
 import argparse
 import csv
