@@ -62,7 +62,6 @@ Sadness        | 0.99          | 0.92       | 0.95
 Suprise        | 0.98          | 0.92       | 0.95
 Trust          | 0.95          | 0.88       | 0.91
 Neutral        | 0.92          | 1.00       | 0.96
-               |               |            |
 Average        | 0.98          | 0.97       | 0.97
 
 Following table shows information about test set.
@@ -81,5 +80,4 @@ Sadness        | 0.42          | 0.53       | 0.47
 Suprise        | 0.55          | 0.38       | 0.45
 Trust          | 0.12          | 0.12       | 0.12
 Neutral        | 0.37          | 0.37       | 0.37
-               |               |            |
 Average        | 0.60          | 0.62       | 0.55
