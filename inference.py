@@ -61,6 +61,6 @@ if __name__ == "__main__":
 	parser.add_argument("--test_csv", default="D:\\UTD\\Assignment\\NLP\\project\\nlp_test.csv")
 	parser.add_argument("--threshold", default=0.0017, type=float)
 	parser.add_argument("--writeto_file", default=True)
-	parser.add_argument("--evaluation", default=True)
+	parser.add_argument("--evaluation", default=False)
 	args = parser.parse_args()
 	run(args.model_dir, args.test_csv, args.threshold, args.evaluation)
