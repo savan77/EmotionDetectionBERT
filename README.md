@@ -23,7 +23,7 @@ Here ```--csvfile``` represents where to store the converted file.
 ### Training ###
 Once you have the files in the required format, you can start training. You may want to change the parameters. I tried with multiple parameters and the file contains ones that gave the best result.
 ```
-python train_bert.py --epochs=20
+python train_bert.py --epochs=15
 ```
 
 You can find all available options by running following command.
@@ -60,7 +60,7 @@ If you want to evaluate your model on test or train set, you can do so by runnin
 python inference.py --test_csv=D:\\UTD\\Assignment\\NLP\\project\\nlp_test.csv --evaluation=True
 ```
 
-I ran the evaluation on train set and found following informations.
+I ran the evaluation on train set and found following information.
 
 
 Emotion        | Precision     | Recall     | f1-score
