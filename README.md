@@ -1,6 +1,14 @@
 ## Multi Emotion Detection from COVID-19 Text using BERT ##
 
-#### Data Preparation ####
+### Requirements ###
+
+The code was tested with Python3.8 and PyTorch 1.5.0. Requirements can be installed with following command.
+```
+pip install -r requirements.txt
+``` 
+You may have to change package name (append +cpu) for non-cuda version.
+
+### Data Preparation ###
 The model expects data to be in the csv file. So, you first need to convert json files into csv files. If you have data in any other format, you may need to modify the code.
 
 To generate the csv files run the following command.
@@ -12,7 +20,7 @@ python .\data_generator.py --file=D:\UTD\Assignment\NLP\project\nlp_test.json --
 Here ```--csvfile``` represents where to store the converted file.
 
 
-#### Training ####
+### Training ###
 Once you have the files in the required format, you can start training. You may want to change the parameters. I tried with multiple parameters and the file contains ones that gave the best result.
 ```
 python train_bert.py --epochs=20
@@ -30,7 +38,7 @@ Following graphs shows loss (1) and learning rate (2) over time.
 <img src="./assets/lr.svg" width="400" height="300"/>
 
 
-#### Inference ####
+### Inference ###
 Once you have the trained model, you can run the inference on test csv files. Note that as of now, this script requires annotated data to compute the metrics. But it can easily be modified to generate output only.
 
 Pretrained model can be found [here](https://utdallas.box.com/s/sqqb0n9qe7txb6j3725aiz76gwlmszuw)
@@ -44,7 +52,7 @@ If ```--evaluation``` is set to true, it will output various metrics.
 **Threshold**
 One important factor here is to find the optimal threshold for the confidence score. I tested various threshold and found 0.0017 to give the best results for the above specified model. If you train your own model, you may want to run ```find_threshold.py``` to find the best threshold.
 
-#### Model Evaluation ####
+### Model Evaluation ###
 
 If you want to evaluate your model on test or train set, you can do so by running following command. Note that the file must be in the csv format.
 
