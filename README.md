@@ -98,3 +98,13 @@ Neutral        | 0.37          | 0.37       | 0.37
 Average        | 0.60          | 0.62       | 0.55
 
 If we set threshold to 0.02 then the average accuracy is 0.66.
+
+### Possible Improvements
+
+![Class Imbalance](/assets/class_distribution.png)
+
+The biggest caveat here was the class imbalance. It has been established that the class imabalance can negatively affect our model. So, it is always a good idea to balance our data before training the model. Due to limited time, I didn't do any of that stuff. But ideally, we want to oversample from minority classes or pass weights to the loss function. I implemented both approaches for image classification [here](github.com/savan77/Transfer-Learning).
+
+As we can see above, negative emotions such as an anger or pessimism have bigger representation in the data compare to happy emotions. This makes sense, but in order to train a good model we should even it out.
+
+Moreover, we can play with the network. Here, the standard off-the-shelf text classification network was used. Maybe adding more fully connected layer on top of the BERT may help.
